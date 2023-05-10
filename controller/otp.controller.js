@@ -21,7 +21,7 @@ exports.otpSender = async (req, res) => {
 
     let newOtp = await otpModel.create({ otp: OTP, email: req.body.to });
     console.log("newOtp", newOtp);
-    transporter.sendMail({
+    await transporter.sendMail({
       // fnder addressrom: "", // se\
       from: req.body.from || "rapidosh77@outlook.com",
       to: req.body.to, // list of receivers

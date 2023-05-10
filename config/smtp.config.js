@@ -2,7 +2,7 @@ const nodeMailer = require("nodemailer");
 
 let transporter = nodeMailer.createTransport({
   host: "smtp-mail.outlook.com", // hostname
-  service: "outlook", // service name
+  service: "smtp.office365.com", // service name
   secureConnection: false,
   tls: {
     ciphers: "SSLv3", // tls version
