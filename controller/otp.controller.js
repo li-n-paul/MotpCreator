@@ -53,7 +53,7 @@ exports.verify = async (req, res) => {
           },
         });
         console.log("====", doesOtpExists == x);
-        return res.status(200).send("Success  ");
+        return res.status(200).send("Success");
       }
     }
   } catch (err) {
