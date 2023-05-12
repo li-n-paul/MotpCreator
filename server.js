@@ -7,9 +7,9 @@ const DB_URL = require("./config/db.config");
 const bodyParser = require("body-parser");
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-
+const origin = ORIGIN.split(",")
 const corsOptions = {
-  origin: ORIGIN,
+  origin: origin,
 
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"], // allow these methods
   allowedHeaders: ["Content-Type"], // allow these headers
